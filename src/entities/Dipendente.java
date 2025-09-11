@@ -18,15 +18,15 @@ public class Dipendente {
     //Getter
 
     public int getMatricola() {
-        return matricola;
+        return this.matricola;
     }
 
     public int getStipendio() {
-        return stipendio;
+        return this.stipendio;
     }
 
     public Dipartimento getDipartimento() {
-        return dipartimento;
+        return this.dipartimento;
     }
 
     //Setter
