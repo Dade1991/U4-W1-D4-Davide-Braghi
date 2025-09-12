@@ -1,20 +1,32 @@
 import entities.Dipartimento;
 import entities.Dipendente;
+import entities.DipendenteFullTime;
+import entities.DipendetePartTime;
 
 public class Main {
     public static void main(String[] args) {
-        Dipendente dipendenteDirigente = new Dipendente(99, 2500, Dipartimento.VENDITE);
-        Dipendente dipendenteTempoPieno = new Dipendente(67, 1800, Dipartimento.PRODUZIONE);
-        Dipendente dipendentePartTime = new Dipendente(108, 1650, Dipartimento.AMMINISTRAZIONE);
+        //Istanze
+
+//        Dipendente Davide = new Dipendente(3, 1200, Dipartimento.AMMINISTRAZIONE);
+//        Dipendente Alessandra = new Dipendente(5, 1800, Dipartimento.VENDITE);
+//
+//        Dipendente[] dipendenti = {
+//                Davide, Alessandra
+//        };
+//
+//        for (Dipendente dipendente : dipendenti) {
+//            dipendente.getMatricola();
+//        }
+
+        DipendenteFullTime Gian = new DipendenteFullTime(3, 1200, Dipartimento.AMMINISTRAZIONE);
+        DipendetePartTime Giorgio = new DipendetePartTime(5, 700, Dipartimento.VENDITE, 10);
 
         Dipendente[] dipendenti = {
-                dipendenteDirigente,
-                dipendenteTempoPieno,
-                dipendentePartTime,
+                Gian, Giorgio
         };
 
-        for (Dipendente arrayOfDipendenti : dipendenti) {
-            System.out.println("Matricola: " + arrayOfDipendenti.getMatricola());
+        for (Dipendente singleDipendente : dipendenti) {
+            System.out.println(singleDipendente.calculateSalary());
         }
     }
 }

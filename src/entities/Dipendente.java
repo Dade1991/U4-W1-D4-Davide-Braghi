@@ -1,18 +1,18 @@
 package entities;
 
-public class Dipendente {
+public abstract class Dipendente {
     //Attributi
 
     private int matricola;
-    private int stipendio;
+    private double stipendio;
     private Dipartimento dipartimento;
 
     //Costruttori
 
-    public Dipendente(int matricola, int stipendio, Dipartimento dipartimento) {
-        this.matricola = matricola;
-        this.stipendio = stipendio;
-        this.dipartimento = dipartimento;
+    public Dipendente(int m, double s, Dipartimento d) {
+        this.matricola = m;
+        this.stipendio = s;
+        this.dipartimento = d;
     }
 
     //Getter
@@ -21,20 +21,17 @@ public class Dipendente {
         return this.matricola;
     }
 
-    public int getStipendio() {
+    public double getStipendio() {
         return this.stipendio;
-    }
-
-    public Dipartimento getDipartimento() {
-        return this.dipartimento;
     }
 
     //Setter
 
-    public void setDipartimento(Dipartimento dipartimento) {
-        this.dipartimento = dipartimento;
+    public void setDipartimento(Dipartimento d) {
+        this.dipartimento = d;
     }
 
-    //Metodi
+    //Metodi astratti
 
+    public abstract double calculateSalary();
 }
